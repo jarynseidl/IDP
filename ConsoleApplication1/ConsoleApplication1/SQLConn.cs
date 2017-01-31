@@ -34,16 +34,13 @@ namespace ConsoleApplication1
                 System.Console.WriteLine("Problem Connecting");
             }
         }
-        public static SQLConn getSingleton
+        public static SQLConn getSingleton(String server, String db, String uName, String pw, bool trusted)
         {
-            get
+            if (instance == null)
             {
-                if (instance == null)
-                {
-                    instance = new SQLConn();
-                }
-                return instance;
+                instance = new SQLConn(server, db, uName, pw, trusted);
             }
+            return instance;
         }
     }
 }
