@@ -10,6 +10,8 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            System.Console.WriteLine("Hello World");
+            IDP myIDP = new IDP();
         }
     }
 }

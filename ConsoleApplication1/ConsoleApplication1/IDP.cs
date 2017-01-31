@@ -14,6 +14,11 @@ namespace ConsoleApplication1
         int stopMoment;
         String code;
 
+        public IDP()
+        {
+
+        }
+
         public IDP(int IDP, int rtgSet, int startMoment, int stopMoment, String code)
         {
             this.IDP_SK = IDP;
