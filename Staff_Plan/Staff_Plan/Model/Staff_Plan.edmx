@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FSREModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Staff_Plan">
+          <Key>
+            <PropertyRef Name="Week" />
+            <PropertyRef Name="LOB" />
+            <PropertyRef Name="Plan" />
+          </Key>
+          <Property Name="Week" Type="date" Nullable="false" />
+          <Property Name="LOB" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Plan" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="FTE Definition" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Planned Attrition" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Occupancy" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Shrinkage" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned OOC Shrinkage" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned ABS" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Time Off" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned LOA" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned IC Shrinkage" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Break" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Coach" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Lead" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Meeting" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Personal" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Preshift" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Project" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned System" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Training" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Planned Unaccounted Time" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="Production HC" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Tenured HC" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Non-Tenured HC" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Nesting HC" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Training HC" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Production Hours" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Tenured Hours" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Non-Tenured Hours" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Nesting Hours" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Training Hours" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Production AHT" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Tenured AHT" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Non-Tenured AHT" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Nesting AHT" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Training AHT" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Production Concurrency" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Tenured Concurrency" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Non-Tenured Concurrency" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Nesting Concurrency" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Training Concurrency" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Production FTE" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Tenured FTE" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Non-Tenured FTE" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Nesting FTE" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Training FTE" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Production Capacity" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Tenured Capacity" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Non-Tenured Capacity" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Nesting Capacity" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Training Capacity" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Production Seats" Type="numeric" Precision="9" Scale="2" />
+          <Property Name="Training Seats" Type="numeric" Precision="9" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="FSREModelStoreContainer">
+          <EntitySet Name="Staff_Plan" EntityType="Self.Staff_Plan" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FSREModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Staff_Plan">
+          <Key>
+            <PropertyRef Name="Week" />
+            <PropertyRef Name="LOB" />
+            <PropertyRef Name="Plan" />
+          </Key>
+          <Property Name="Week" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LOB" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Plan" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FTE_Definition" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Planned_Attrition" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Occupancy" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Shrinkage" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_OOC_Shrinkage" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_ABS" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Time_Off" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_LOA" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_IC_Shrinkage" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Break" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Coach" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Lead" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Meeting" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Personal" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Preshift" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Project" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_System" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Training" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Planned_Unaccounted_Time" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="Production_HC" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Tenured_HC" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Non_Tenured_HC" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Nesting_HC" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Training_HC" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Production_Hours" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Tenured_Hours" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Non_Tenured_Hours" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Nesting_Hours" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Training_Hours" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Production_AHT" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Tenured_AHT" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Non_Tenured_AHT" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Nesting_AHT" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Training_AHT" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Production_Concurrency" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Tenured_Concurrency" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Non_Tenured_Concurrency" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Nesting_Concurrency" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Training_Concurrency" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Production_FTE" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Tenured_FTE" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Non_Tenured_FTE" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Nesting_FTE" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Training_FTE" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Production_Capacity" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Tenured_Capacity" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Non_Tenured_Capacity" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Nesting_Capacity" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Training_Capacity" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Production_Seats" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Training_Seats" Type="Decimal" Precision="9" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="FSREEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Staff_Plan" EntityType="Self.Staff_Plan" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FSREModelStoreContainer" CdmEntityContainer="FSREEntities">
+          <EntitySetMapping Name="Staff_Plan">
+            <EntityTypeMapping TypeName="FSREModel.Staff_Plan">
+              <MappingFragment StoreEntitySet="Staff_Plan">
+                <ScalarProperty Name="Week" ColumnName="Week" />
+                <ScalarProperty Name="LOB" ColumnName="LOB" />
+                <ScalarProperty Name="Plan" ColumnName="Plan" />
+                <ScalarProperty Name="FTE_Definition" ColumnName="FTE Definition" />
+                <ScalarProperty Name="Planned_Attrition" ColumnName="Planned Attrition" />
+                <ScalarProperty Name="Planned_Occupancy" ColumnName="Planned Occupancy" />
+                <ScalarProperty Name="Planned_Shrinkage" ColumnName="Planned Shrinkage" />
+                <ScalarProperty Name="Planned_OOC_Shrinkage" ColumnName="Planned OOC Shrinkage" />
+                <ScalarProperty Name="Planned_ABS" ColumnName="Planned ABS" />
+                <ScalarProperty Name="Planned_Time_Off" ColumnName="Planned Time Off" />
+                <ScalarProperty Name="Planned_LOA" ColumnName="Planned LOA" />
+                <ScalarProperty Name="Planned_IC_Shrinkage" ColumnName="Planned IC Shrinkage" />
+                <ScalarProperty Name="Planned_Break" ColumnName="Planned Break" />
+                <ScalarProperty Name="Planned_Coach" ColumnName="Planned Coach" />
+                <ScalarProperty Name="Planned_Lead" ColumnName="Planned Lead" />
+                <ScalarProperty Name="Planned_Meeting" ColumnName="Planned Meeting" />
+                <ScalarProperty Name="Planned_Personal" ColumnName="Planned Personal" />
+                <ScalarProperty Name="Planned_Preshift" ColumnName="Planned Preshift" />
+                <ScalarProperty Name="Planned_Project" ColumnName="Planned Project" />
+                <ScalarProperty Name="Planned_System" ColumnName="Planned System" />
+                <ScalarProperty Name="Planned_Training" ColumnName="Planned Training" />
+                <ScalarProperty Name="Planned_Unaccounted_Time" ColumnName="Planned Unaccounted Time" />
+                <ScalarProperty Name="Production_HC" ColumnName="Production HC" />
+                <ScalarProperty Name="Tenured_HC" ColumnName="Tenured HC" />
+                <ScalarProperty Name="Non_Tenured_HC" ColumnName="Non-Tenured HC" />
+                <ScalarProperty Name="Nesting_HC" ColumnName="Nesting HC" />
+                <ScalarProperty Name="Training_HC" ColumnName="Training HC" />
+                <ScalarProperty Name="Production_Hours" ColumnName="Production Hours" />
+                <ScalarProperty Name="Tenured_Hours" ColumnName="Tenured Hours" />
+                <ScalarProperty Name="Non_Tenured_Hours" ColumnName="Non-Tenured Hours" />
+                <ScalarProperty Name="Nesting_Hours" ColumnName="Nesting Hours" />
+                <ScalarProperty Name="Training_Hours" ColumnName="Training Hours" />
+                <ScalarProperty Name="Production_AHT" ColumnName="Production AHT" />
+                <ScalarProperty Name="Tenured_AHT" ColumnName="Tenured AHT" />
+                <ScalarProperty Name="Non_Tenured_AHT" ColumnName="Non-Tenured AHT" />
+                <ScalarProperty Name="Nesting_AHT" ColumnName="Nesting AHT" />
+                <ScalarProperty Name="Training_AHT" ColumnName="Training AHT" />
+                <ScalarProperty Name="Production_Concurrency" ColumnName="Production Concurrency" />
+                <ScalarProperty Name="Tenured_Concurrency" ColumnName="Tenured Concurrency" />
+                <ScalarProperty Name="Non_Tenured_Concurrency" ColumnName="Non-Tenured Concurrency" />
+                <ScalarProperty Name="Nesting_Concurrency" ColumnName="Nesting Concurrency" />
+                <ScalarProperty Name="Training_Concurrency" ColumnName="Training Concurrency" />
+                <ScalarProperty Name="Production_FTE" ColumnName="Production FTE" />
+                <ScalarProperty Name="Tenured_FTE" ColumnName="Tenured FTE" />
+                <ScalarProperty Name="Non_Tenured_FTE" ColumnName="Non-Tenured FTE" />
+                <ScalarProperty Name="Nesting_FTE" ColumnName="Nesting FTE" />
+                <ScalarProperty Name="Training_FTE" ColumnName="Training FTE" />
+                <ScalarProperty Name="Production_Capacity" ColumnName="Production Capacity" />
+                <ScalarProperty Name="Tenured_Capacity" ColumnName="Tenured Capacity" />
+                <ScalarProperty Name="Non_Tenured_Capacity" ColumnName="Non-Tenured Capacity" />
+                <ScalarProperty Name="Nesting_Capacity" ColumnName="Nesting Capacity" />
+                <ScalarProperty Name="Training_Capacity" ColumnName="Training Capacity" />
+                <ScalarProperty Name="Production_Seats" ColumnName="Production Seats" />
+                <ScalarProperty Name="Training_Seats" ColumnName="Training Seats" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

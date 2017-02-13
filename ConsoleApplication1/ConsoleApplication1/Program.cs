@@ -13,6 +13,7 @@ namespace ConsoleApplication1
             System.Console.WriteLine(args.Length);
             System.Console.WriteLine("Hello World");
             IDP myIDP = new IDP();
+            DAO.IDP_DAO myIDPDAO = new DAO.IDP_DAO();
             eWFMConn.getSingleton();
         }
     }
